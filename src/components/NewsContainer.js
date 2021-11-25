@@ -46,6 +46,9 @@ const NewsContainer = (props) => {
   useEffect(() => {
     const showLoadingBar = page === 1;
     loadData(showLoadingBar);
+    document.title = `${
+      props.category ? capitalize(props.category) : "Home"
+    } - NewsGenie`;
   }, [page]);
   return (
     <div className="container" style={{ marginTop: "70px" }}>
